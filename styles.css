@@ -45,6 +45,7 @@ main {
     margin: 0 auto;
     padding: 42px 0px;
     gap: 32px;
+    align-items: center;
 }
 
 .contactColumn {
