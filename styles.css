@@ -1,0 +1,144 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.heroBackground {
+    background-image: linear-gradient(135deg, #1D3676, #5179C3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.heroName {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.heroHeader {
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.contactUsContainer {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 42px 0px;
+    gap: 32px;
+}
+
+.contactColumn {
+    flex: 1;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contactHeader {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #000000;
+    margin: 0;
+    text-align: left;
+}
+
+.contactText {
+    font-family: 'Hind', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    text-align: left;
+}
+
+.contactDetails {
+    font-family: 'Hind', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    padding-left: 12px;
+}
+
+.contactLink {
+    color: #000000;
+    text-decoration: underline #1D3676;
+}
+
+.contactImg {
+    width: 100%;
+}
+
+.footerText {
+    text-align: center;
+    font-family: 'Hind', sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    color: #000000;
+}
+
+/* Phones & Tablets */
+@media screen and (max-width: 768px) {
+    .heroBackground {
+        min-height: 300px;
+    }
+
+    .contactUsContainer {
+        flex-direction: column;
+    }
+
+    .contactColumn {
+        padding: 0px 24px;
+    }
+
+    .iconContainer {
+        margin: 28px 0;
+    }
+
+    .heroName {
+        font-size: 48px;
+        text-align: left;
+        padding: 0 24px;
+    }
+
+    .heroHeader {
+        font-size: 24px;
+        text-align: left;
+        padding: 0 24px;
+    }
+}
+
+/* Big Tablets & Desktop */
+@media screen and (min-width: 769px) {
+    .heroBackground {
+        min-height: 400px;
+    }
+
+    .heroName {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .heroHeader {
+        font-size: 30px;
+        text-align: center;
+    }
+}
