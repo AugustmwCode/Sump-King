@@ -3,6 +3,7 @@ html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
 }
 
 main {
@@ -43,18 +44,30 @@ main {
     flex-direction: row;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 42px 0px;
     gap: 32px;
     align-items: center;
 }
 
-.contactColumn {
+.pumpInfoContainer {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 32px;
+    align-items: center;
+}
+
+.greyBackground {
+    background-color: #FAFAFA;
+}
+
+.column {
     flex: 1;
     max-width: 600px;
     margin: 0 auto;
 }
 
-.contactHeader {
+.header {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 24px;
@@ -63,7 +76,7 @@ main {
     text-align: left;
 }
 
-.contactText {
+.text {
     font-family: 'Hind', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -84,8 +97,23 @@ main {
     text-decoration: underline #1D3676;
 }
 
-.contactImg {
-    width: 100%;
+.anchorButton {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #1D3676;
+    color: #FFFFFF;
+    border: 1px solid #1D3676;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.anchorButton:hover {
+    background-color: transparent;
+    color: #1D3676;
 }
 
 .footerText {
@@ -97,16 +125,24 @@ main {
 }
 
 /* Phones & Tablets */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 999px) {
     .heroBackground {
         min-height: 300px;
     }
 
     .contactUsContainer {
         flex-direction: column;
+        padding: 42px 0px 24px 0px;
+        gap: 0px;
     }
 
-    .contactColumn {
+    .pumpInfoContainer {
+        flex-direction: column-reverse;
+        padding: 24px 0px;
+        gap: 48px;
+    }
+
+    .column {
         padding: 0px 24px;
     }
 
@@ -128,7 +164,7 @@ main {
 }
 
 /* Big Tablets & Desktop */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1000px) {
     .heroBackground {
         min-height: 400px;
     }
@@ -141,5 +177,9 @@ main {
     .heroHeader {
         font-size: 30px;
         text-align: center;
+    }
+
+    .pumpInfoContainer, .contactUsContainer {
+        padding: 42px 24px;
     }
 }
